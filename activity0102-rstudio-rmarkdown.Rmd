@@ -15,6 +15,16 @@ library(datasauRus)
 
 ### Exercise 1
 
+```
+datasaurus_dozen %>%
+  count(dataset) %>%
+  print(13)
+```
+`datasaurus_dozen %>%
+  count(dataset) %>%
+  print(13)`
+
+
 Datasaurus has 1846 rows and 3 columns.
 
 ### Exercise 2
