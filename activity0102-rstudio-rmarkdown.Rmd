@@ -41,7 +41,7 @@ The data plot looks like a T-rex
 
 ### Exercise 3
 
-Creating the plot for the star package
+Creating the plot for the star dataset
 
 ```{r plot-star}
 star_data <- datasaurus_dozen %>%
@@ -58,17 +58,28 @@ star_data %>%
   summarize(r = cor(x, y))
 ```
 
+The r value of this data set is very similar to the r value for dino. The coefficients are .015 away from each other and show almost zero correlation.
+
 ### Exercise 4
 
-(Add code and narrative as needed. Note that two R chunks are given but they are not labeled. Use the convention from above to name them appropriately.)
+Creating the plot for the circle dataset
 
-```{r}
+```{r plot-circle}
+circle_data <- datasaurus_dozen %>%
+  filter(dataset == "circle")
 
+ggplot(data = circle_data, mapping = aes(x = x, y = y)) +
+  geom_point()
 ```
 
-```{r}
+Calculating the correlation between `x` and `y` in this dataset:
 
+```{r cor-circle}
+circle_data %>%
+  summarize(r = cor(x, y))
 ```
+
+The r value of this data set is very similar to the r value for dino. The coefficients are .015 away from each other and show almost zero correlation.
 
 ### Exercise 5
 
